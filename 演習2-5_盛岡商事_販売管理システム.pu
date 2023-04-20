@@ -1,0 +1,8 @@
+@startuml 販売管理
+actor 田中さん #DDDDDD;line:black;line.bold;
+actor 鈴木さん #DDDDDD;line:black;line.bold;
+    rectangle 販売部{
+        usecase 注文商品
+        usecase 出荷状況
+    }
+@enduml

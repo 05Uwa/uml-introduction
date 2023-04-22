@@ -1,0 +1,11 @@
+@startuml 販売管理
+actor 社員 #DDDDDD;line:black;line.bold;
+actor 人事担当者 #DDDDDD;line:black;line.bold;
+actor 従業員登録システム #DDDDDD;line:black;line.bold;
+rectangle 社員情報{
+    usecase 社員情報参照
+    usecase 社員情報変更
+}
+
+従業員登録システム --> 社員情報変更
+@enduml

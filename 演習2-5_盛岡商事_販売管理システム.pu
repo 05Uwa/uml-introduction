@@ -1,8 +1,11 @@
 @startuml 販売管理
-actor 田中さん #DDDDDD;line:black;line.bold;
 actor 鈴木さん #DDDDDD;line:black;line.bold;
+actor 田中さん #DDDDDD;line:black;line.bold;
     rectangle 販売部{
-        usecase 注文商品
-        usecase 出荷状況
+        usecase 出荷状況をシステムに登録
+        usecase 注文商品の確認
     }
+    田中さん --> 注文商品の確認
+    鈴木さん --> 出荷状況をシステムに登録
+    出荷状況をシステムに登録 <. 注文商品の確認 : <<extend>>
 @enduml

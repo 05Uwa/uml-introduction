@@ -7,5 +7,5 @@ actor 利用者 #DDDDDD;line:black;line.bold;
     }
 input .> ログイン  : <<include>>
     キャンペーン価格 .> (input) :<< extend >>
-利用者 --> ログイン
+利用者 --> input
 @enduml

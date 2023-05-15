@@ -1,0 +1,12 @@
+@startuml   データ更新予約
+hide footbox
+participant ":controller" as contr
+participant ":hotel" as Hon
+activate contr
+contr --> Hon:予約操作
+activate Hon
+Hon --> Hon:予約オブジェクト作成
+deactivate Hon
+deactivate contr
+contr <<-- Hon:自身の予約登録情報
+@enduml

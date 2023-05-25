@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+class "社員" as emp {
+    氏名:高橋洋平
+    申請日:2020年10月21日
+    名称:情報処理安全確保支援士
+}
+class "社員" as emp2{
+    氏名:樋口正之
+    申請日:2020年10月21日
+    名称:情報処理安全確保支援士
+}
+
+class "資格" as qua {
+    - 名称:情報処理安全確保支援士
+}
+emp "1" o-ri- "*" qua 
+@enduml

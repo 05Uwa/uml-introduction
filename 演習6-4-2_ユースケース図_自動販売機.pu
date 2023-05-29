@@ -1,0 +1,15 @@
+@startuml ユースケース演習
+left to right direction
+actor 客 #DDDDDD;line:black;line.bold;
+actor ベンダー #DDDDDD;line:black;line.bold;
+package 自動販売機 {
+    usecase ボタン
+    usecase 料金装置
+    usecase ベンダー装置
+}
+客 --> ボタン
+客 --> 料金装置
+客 --> ベンダー装置
+料金装置 <-- ベンダー
+ベンダー装置 <-- ベンダー 
+@enduml

@@ -1,8 +1,13 @@
 @startuml ライン
-left to right direction
-[*] --> 電源SW_ON : システム起動
-電源SW_ON --> 右旋回 : 右モーターOFF　左モーターON
-右旋回 --> 左旋回 : 左モーターOFF　右モーターON
-左旋回 --> 電源SW_OFF : システム停止
+state ライントレーサ{
+    state 電源SW_ON <<entryPoint>>
+    state 電源SW_OFF<<exitPoint>>
+    電源SW_ON -->  右旋回 : システム起動
+    
+    右旋回 --> 左旋回 : 左モーターOFF　右モーターON
+    左旋回 --> 右旋回 : 左モーターON　右モーターOFF
+    左旋回 --> 電源SW_OFF : システム停止
+}
+[*] --> 電源SW_ON
 電源SW_OFF --> [*]
 @enduml

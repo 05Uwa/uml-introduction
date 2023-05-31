@@ -1,0 +1,18 @@
+@startuml ライントレーサー
+    left to right direction
+    actor ユーザー #DDDDDD;line:black;line.bold;
+    actor 光センサー #DDDDDD;line:black;line.bold;
+    actor CPU #DDDDDD;line:black;line.bold;
+    rectangle ライントレーサー{
+        usecase 明るい
+        usecase 暗い
+        usecase 電源SW
+        usecase 右モーターON
+        usecase 左モーターOFF
+    }
+光センサー --> 明るい
+光センサー --> 暗い
+CPU --> 右モーターON
+CPU --> 左モーターOFF
+ユーザー --> 電源SW
+@enduml

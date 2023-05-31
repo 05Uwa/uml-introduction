@@ -1,0 +1,14 @@
+@startuml
+class ライントレーサー{
+    - 電源:String
+}
+
+class 光センサー{
+    - 暗い:String
+    - 明るい:String
+}
+class モーター{
+    - 右モーター:String
+    - 左モーター:String
+}
+@enduml

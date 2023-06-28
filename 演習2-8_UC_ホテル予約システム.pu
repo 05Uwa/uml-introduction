@@ -1,10 +1,23 @@
 @startuml ホテル予約
+left to right direction
 actor 利用者 #DDDDDD;line:black;line.bold;
-rectangle{
+actor ホテル従業員 #DDDDDD;line:black;line.bold;
+actor ホテル管理者 #DDDDDD;line:black;line.bold;
+rectangle ホテル宿泊予約{
     usecase 部屋の状況を確認する
+    usecase 予約の集計をする
     usecase 部屋を予約する
     usecase 部屋の状況を入力する
     usecase 会員登録をする
-    usecase 
+    usecase ログインする
+    usecase (<u>キャンペーン価格</u>\nキャンペーン期間中ならキャンペーン価格) as input
 }
+部屋を予約する .> ログインする :<<include>>
+ホテル従業員 --> 部屋の状況を確認する
+ホテル管理者 --> 予約の集計をする
+ログインする --> 会員登録をする
+ホテル従業員 --> 部屋の状況を入力する
+利用者 --> 部屋の状況を確認する
+利用者 --> 部屋を予約する
+部屋を予約する <. input : <<extend>>
 @enduml

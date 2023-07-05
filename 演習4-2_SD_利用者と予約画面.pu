@@ -1,7 +1,12 @@
-@startuml
+@startuml 利用者、予約画面
 hide footbox
-participant
-participant
-activate user
-deactivate user
+participant "user:ログイン" as a
+participant ":予約画面" as b
+activate a
+a -> b:ログイン()
+activate b
+b ->b:確認()
+activate b
+deactivate a
+deactivate b
 @enduml

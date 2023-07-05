@@ -1,0 +1,13 @@
+@startuml
+class 医局 {
+    - 内科:string
+    - 外科:string
+    - 小児科:string
+    - 精神科:string
+---
++ set medic(医局:string) void
+}
+
+患者 "1"<-- 医師:診察
+医局"1"<-- 医師:所属
+@enduml
